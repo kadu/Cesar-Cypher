@@ -53,13 +53,16 @@ void main (void) {
 
 // Rotinas do programa
 char *cifraz(char *msg, int passo) {
-    char *cifra;
 	int i;
-    for(i = 0; i <= strlen(msg); i++) {
-      cifra[i]  = msg[i] + passo;	        
-//      cifra2[i]= cifra[i] - passo;
-      printf("cifra[%i] = %c \n",i,cifra[i]);
-      printf("msg..[%i] = %c \n",i,msg[i]);
+    char *cifra;
+    cifra = msg;
+    int aux, aux2;
+    int tam;
+    tam = strlen(msg)-1;
+    for(i = 0; i <= tam; i++) {      
+	  aux = msg[i];
+      aux2  = aux + passo;
+      //cifra[i] = (int)aux2;
+      cifra[i] = msg[i]+passo;
     }
-    printf("%s\n\n",cifra);
 }
